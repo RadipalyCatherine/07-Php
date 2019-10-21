@@ -434,8 +434,7 @@ separator();
 
     5. BONUS : Réaliser une fonction permettant de générer une accroche de X caractères passé paramètres, sans couper de mot.
 
-    6. BONUS : Challenge Réaliser une fonction PHP permettant de
-    convertir une chaine en slug. slugify().
+    6. BONUS : Challenge Réaliser une fonction PHP permettant de convertir une chaine en slug. slugify().
 */
 
 CORRECTION
@@ -461,6 +460,12 @@ function titre ($h3){
 3. Créer une fonction permettant de calculer la TVA 20% (1.2)
 
 echo '<h2>'
+
+function calculTva($montantHT){
+    return $montantHT*1.2;
+}
+
+
 
 // EXERCICE : En partant de l'exemple ci-dessus et en utilisant une boucle for; réalisez un select allant de 1 à 31. Correspondant au nombre de jour dans un mois.
 
@@ -524,6 +529,7 @@ $apprenantes = array('Léna', 'Nia');
 $apprenantes = ['Léna','Nia','Angelique','Astrid','Melissa'];
 
 // -- Afficher les valeurs de notre tableau $apprenantes
+
 #echo $apprenantes; // Ne marche pas Array to string conversion
 echo $apprenantes[1] . '<br>'; // Nia
 echo $apprenantes[2] . '<br>'; // Angélique
@@ -566,4 +572,111 @@ $contact = [
 
 echo '<h1>Bonjour ' . $contact['prenom']. '' . $contact[ 'nom']
 ?> 
+<?php
 
+$mesContacts = []; // Déclarer un tableau vide. 
+$mesContacts[] = 'Hugo'; // Ajouter un élément dans un tableau
+$mesContacts[] = 'Nia'; // Indice affecter automatiquement par PHP
+
+
+$contacts = [];
+$contacts[] = [
+'prenom' => 'Hugo',
+'nom'=> 'LIEGEARD'
+];
+
+$contacts[] = [
+'prenom' => 'Nia',
+'nom'=> 'VITALIS'
+];
+
+$contacts[] = [
+'prenom' => 'Aurélie',
+'nom'=> 'NABAJOTH'
+];
+
+echo '<pre>';
+ print_r($contacts );
+ echo '</pre>';
+
+ 
+ // Afficher les prénoms de chaque contacts :
+
+echo $contacts[0]['prenom'] . '<br>' ;
+echo $contacts[0]['prenom'] . '<br>' ;
+echo $contacts[0]['prenom'] . '<br>' ;
+
+/*
+Faire une boucle afin d'afficher les prénoms
+des contacts dans un paragraphe.
+*/
+
+
+// Avec la boucle FOR
+
+/*
+
+NOTA BENE :
+count et sizeof me retourne la dimension de mon tableau.
+Autrement dit, le nombre d'éléments.
+Pas de différence entre les fonctions.
+*/
+
+echo 'La taille de mon tableau est : ' . count($contacts) . '<br>';
+echo 'La taille de mon tableau est : ' . sizeof($contacts) . '<br>';
+
+for ( $i = 0 ; $i < count($contacts) ; $i++ ) {
+    echo '<p>' . $contacts[$i]['prenom']. '</p>';
+}
+
+// La boucle 
+
+/* Quand il y a deux variables ($index et $valeur):
+La première parcours la colonne des indices (index)
+et la seconde parcours la colonne des valeurs.
+*/
+
+foreach ($contacts as $index => $valeur) {
+    echo 'Mon contact ' . $valeur['prenom'] . 'est a index ' . $index . '<br>';
+}
+
+
+/*
+    EXERCICE :
+    En utilisant une ou plusieurs boucles foreach
+    afficher les informations (Cle / Valeur) du contact
+    $contact.
+
+    BONUS : Vous utiliserez des listes à puces <ul><li>
+*/
+
+separator();
+
+$contact = [
+    // cle      => valeur
+    'prenom'    => 'Rodrigue',
+    'nom'       => 'NOUEL',
+    'telephone' => [
+        'fixe' => '0596 77 68 56',
+        'port' => '0696 67 45 34',
+        'fax'  => '0596 67 56 45'
+    ],
+    'age'       => '43 ans',
+    'adresse'   => [
+        'rue'   => 'Rue de la Maurine',
+        'ville' => 'Fort-de-France',
+        'cp'    => '97200'
+    ]
+
+    foreach ($contacts as $index => $valeur) {
+        echo 'Mon contact ' . $valeur['prenom'] . 'est a index ' . $index . '<br>';
+    }
+];
+
+foreach ($contact as $index=> $valeur) {
+    echo 'Contact'. $valeur['prenom']. 'est a index ' . $index . '<br>' ;
+
+    
+}
+
+?>
