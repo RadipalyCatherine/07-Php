@@ -23,10 +23,10 @@ if ( !empty( $_POST )) { // Si $_POST n'est pas vide.On fait une:
         $errors['email'] = "Vous avez oubliez votre email.";
     }
 
-    // Je fais une vérification du format de l'email
+    // Je fais une vérification du format de l'email.
 
-    if (!empty($email) && !filter_var( $email, FILTER_VALIDATE_EMAIL)
-    )};
+    if (!empty($email) && !filter_var( $email, FILTER_VALIDATE_EMAIL)){;
+
     // Si mon $email n'est pas vide, et que dans le même temps le format de mon email n'est pas correct, je rentre dans la condition.
 
     $errors['email'] = "Vérifiez le format de votre email.";
@@ -40,7 +40,7 @@ if (!empty($sujet)){
 
 // Je fais une vérification du message (A savoir si le contenu est supérieur à 15 caractères) en utilisant la formule suivante: 
 
-if (strlen($message) < 15 ){
+if (strlen($message) < 15){
 $errors['message'] = "Le message est trop court. 15 caractères minimum.";
 }
 
@@ -49,8 +49,6 @@ print_r( $errors );
 
 if (empty($errors)) {
     // Si mon tableau d'erreurs après toutes les vérifications est vide... Alors il n'y a pas eu d'erreurs et je peux procéder à la suite de mon traitement... Sauvegarde en Basse De Données, Envoi de mail...
-}
-
 }
 
 ?>
@@ -82,7 +80,7 @@ if (empty($errors)) {
 <div class="form-group">
         <label for="email">adresse email</label>
         <input type="email"
-class="form-control <?= isset($errors['email']) ? 'is-invalid': '' ?>"
+        class="form-control <?= isset($errors['email']) ? 'is-invalid': '' ?>"
          id="email" name= "email"
          value="<?= $email ?>"
         placeholder="Saisissez votre email"><br>
@@ -100,22 +98,19 @@ class="form-control <?= isset($errors['email']) ? 'is-invalid': '' ?>"
          id="sujet" name="sujet"
         placeholder="Votre sujet"><br>
         <div class="">
+        </div>
+</div>
 
 <!-- Champ message -->
 <div class= "form-group">
-<label for="message">Message</label>
+        <label for="message">Message</label>
 <textarea
 placeholder="Saisissez votre message"><br>
+</div>
 
 <!-- Bouton Submit -->
 <div>
-<button type= "submit" class="btn btn-primary"
-
-
+<button type= "submit" class="btn btn-primary">
+</button>
+</div>
 </body>
-</html>
-
-
-
-
-

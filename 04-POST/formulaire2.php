@@ -14,7 +14,7 @@
     -prenom 
     -nom 
     -email 
-    -motdepasse
+    -mot de passe
 -->
 
 <!-- Prenom -->
@@ -27,13 +27,13 @@
         <input type="text" id="nom" name="nom"
         placeholder="Saisissez votre nom"><br>
 
-<!-- email -->
-        <label for="email">adresse email</label>
+<!-- Email -->
+        <label for="email">Adresse email</label>
         <input type="email" id="email" name= "email"
         placeholder="Saisissez votre email"><br>
 
-<!-- mot de passe -->
-        <label for="mot de passe">mot de passe</label>
+<!-- Mot de passe -->
+        <label for="mot de passe">Mot de passe</label>
         <input type="mot de passe" id
         placeholder="Saisissez votre mot de passe"><br>
 
