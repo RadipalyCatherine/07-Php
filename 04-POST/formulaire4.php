@@ -334,7 +334,7 @@ Correction
 
                         <!-- ----------------------- Description ----------------------- -->
                         
-                        <<div class="form-group">
+                        <div class="form-group">
                             <textarea name="annonce" id="annonce"
                                 class="form-control <?= isset($errors['annonce']) ? 'is-invalid' : '' ?>"
                                 placeholder="Texte de l'annonce..."><?= $annonce ?></textarea>
