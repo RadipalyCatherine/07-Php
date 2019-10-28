@@ -130,7 +130,7 @@ try {
     // header( 'Location: https://google.fr/search?q='  . $e->getMessage() );
     die();
 
-
+    
  }
 
 
