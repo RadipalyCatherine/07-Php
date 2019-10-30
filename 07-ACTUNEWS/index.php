@@ -7,9 +7,9 @@ require_once(__DIR__.'/includes/header.php');
 <div class="container">
     <div class="row">
         <div class="col">
-        <h1>Page d'accueil</h1>
+            <h1>Page d'accueil</h1>
         </div>
-        </div>
+    </div>
 </div>
 
 <?php

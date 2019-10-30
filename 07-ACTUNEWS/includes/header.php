@@ -1,6 +1,5 @@
 <?php
-    $categories = ['Politique', 'Economie', 'Culture', 'Sport'];
-
+    $categories = ['Faits divers','Politique', 'Economie', 'Culture', 'Sport','Dans le monde'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Actunews | Premier site d'actualité en France</title>
 
     <!-- Bootstrap CSS -->
@@ -24,14 +24,30 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">
-        Accueil <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
+    </div>
   </div>
 </nav>
 <!-- Fin du Menu du site -->
+
+
+        <!-- Les catégories du site -->
+        <?php foreach($categories as $categories) { ?>
+          <a class="nav-item nav-link" href="#">
+          <?= $categories; // echo du nom de la categorie ?>
+        </a>
+     <?php } // Fin du foreach sur $categories ?>
+     <a class="nav-item btn btn-outline-primary" href="#">
+        Connexion
+     </a>
+     <a class="nav-item btn btn-outline-primary" href="#">
+        Inscription
+      </a>
+  </div>
+  </div>
+</nav>
+<!-- Fin du Menu du site -->
+
 </body>
 </html>
