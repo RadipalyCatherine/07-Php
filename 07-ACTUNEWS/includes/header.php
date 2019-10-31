@@ -1,5 +1,13 @@
 <?php
     $categories = ['Faits divers','Politique', 'Economie', 'Culture', 'Sport','Dans le monde'];
+
+    $categories = getCategories();
+    //Si un auteur est en session, alors $auteur prendra comme valeur 
+<?php
+// Récupération de nos fonctions globales
+require_once(_DIR_ .)
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +33,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span>
+        </a>
     </div>
   </div>
 </nav>
@@ -38,10 +47,10 @@
           <?= $categories; // echo du nom de la categorie ?>
         </a>
      <?php } // Fin du foreach sur $categories ?>
-     <a class="nav-item btn btn-outline-primary" href="#">
+     <a class="nav-item btn btn-outline-primary mx-2 " href="#">
         Connexion
      </a>
-     <a class="nav-item btn btn-outline-primary" href="#">
+     <a class="nav-item btn btn-outline-primary mx-2 " href="#">
         Inscription
       </a>
   </div>
