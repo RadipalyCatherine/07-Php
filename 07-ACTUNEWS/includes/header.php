@@ -3,10 +3,8 @@
 
     $categories = getCategories();
     //Si un auteur est en session, alors $auteur prendra comme valeur 
-<?php
-// Récupération de nos fonctions globales
-require_once(_DIR_ .)
 
+// Récupération de nos fonctions globales
 
 ?>
 <!DOCTYPE html>
